@@ -7,7 +7,12 @@ header h2{
     font-weight: 600;
     font-size: 2rem;
 }
+.maze{
+    display: flex;
+    flex-direction: column;
+}
 .maze__row{
+    flex-grow: 1;
     display: flex;
     flex-direction: row;
     margin: 0 10vw ;
@@ -22,12 +27,61 @@ header h2{
     background-color: green;
 }
 #player{
-    margin: 25%;
-    height: 50%;
-    width: 50%;
-    background-color: darkblue;
-    border-radius: 50%;
+    background-image: url(./Coelho.png);
+    background-size: cover;
+    height: 100%;
+    width: 100%;
 }
 #meta{
-    background-color: darkmagenta;
+    background-image: url(./Cenoura.png);
+    background-size: cover;
+}
+.Vitoria{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 3rem;
+}
+.playAgain{
+    margin: 20px auto;
+    display: block;
+}
+.keyboard{
+    margin: 50px auto;
+    display:flex;
+    flex-direction: column;
+}
+.keyboard__line{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.keyboard__line>div{
+    height:30vw;
+    width:30vw;
+    border: 1px solid transparent;
+}
+.keyboard__line>.keyboard__arrow{
+    background-color: red;
+    background-image: url(./Seta.png);
+    background-size: contain;
+    border-color: black;
+    border-radius: 50%;
+}
+#arrowDown{
+    transform: rotate(90deg);
+}
+#arrowLeft{
+    transform: rotate(180deg);
+}
+#arrowUp{
+    transform: rotate(270deg);
+}
+
+@media (min-width: 769px) {
+    .maze__row{
+        margin: 0 20vw;
+    }
+    .keyboard{
+        display: none;
+    }
 }
